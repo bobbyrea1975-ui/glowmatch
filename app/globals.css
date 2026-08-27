@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-fraunces: 'Fraunces', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background-color: #FAF9F6;
+  color: #232620;
+}
+
+/* Signature element: the "layering" bar — echoes cleanse / treat / moisturize
+   skincare steps, reused as the quiz progress indicator. */
+.layer-track {
+  display: flex;
+  height: 6px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #E4E7DF;
+}
+
+.layer-step {
+  height: 100%;
+  transition: flex-basis 400ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layer-step {
+    transition: none;
+  }
+}
